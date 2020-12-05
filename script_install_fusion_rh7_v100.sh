@@ -537,7 +537,7 @@ auth() {
     # Set fusionpbx auth
     #
     user_name='admin'
-    user_password='bndes@2020'
+    user_password='XpTo@2020'
     #
     # Set fusionpbx database auth
     #
