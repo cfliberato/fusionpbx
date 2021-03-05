@@ -1,5 +1,3 @@
-FusionPBX
-
 ###############################################################################
  
   Copyright (C) 2021 All Rights Reserved.
@@ -11,12 +9,6 @@ FusionPBX
   2 of the License, or (at your option) any later version.
  
 ###############################################################################
-
-Script			Description
------------------------	-----------------------------------------------------------------------------------------------
-freeswitch_modules	Build modules scripts
-install			Install scripts
-scripts			Setup scripts
 
 Para execução de scripts atrás de um proxy é necessário configurar variáveis para acessar o proxy, seja no SHELL ou
 no corpo dos scripts que necessitarem de acesso externo:

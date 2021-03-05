@@ -1,5 +1,3 @@
-Build Modules
-
 ###############################################################################
  
   Copyright (C) 2021 All Rights Reserved.
@@ -12,11 +10,20 @@ Build Modules
  
 ###############################################################################
 
-Script					Description
-------------------------------------	-----------------------------------------------------------------------------------------------
-freeswitch_build_mod_av.sh		Build FreeSWITCH mod_av
-freeswitch_build_mod_bcg729.sh		Build FreeSWITCH mod_bcg729
-freeswitch_build_mod_shout.sh		Build FreeSWITCH mod_shout
-freeswitch_check_mod_dependencies.sh	Check dependencies from all modules
-freeswitch_install_mod_shout+av.sh	Add FreeSWITCH mod_shout (MP3 support)
-sngrep_build_with_epp.sh		Sngrep with EPP support
+freeswitch_build_mod_av.sh
+	Build FreeSWITCH mod_av
+
+freeswitch_build_mod_bcg729.sh
+	Build FreeSWITCH mod_bcg729
+
+freeswitch_build_mod_shout.sh
+	Build FreeSWITCH mod_shout
+
+freeswitch_check_mod_dependencies.sh
+	Check dependencies from all modules
+
+freeswitch_install_mod_shout+av.sh
+	Add FreeSWITCH mod_shout (MP3 support)
+
+sngrep_build_with_epp.sh
+	Sngrep with EPP support

@@ -1,5 +1,3 @@
-Install Scripts
-
 ###############################################################################
  
   Copyright (C) 2021 All Rights Reserved.
@@ -12,7 +10,8 @@ Install Scripts
  
 ###############################################################################
 
-Script				Description
-------------------------------	-----------------------------------------------------------------------------------------------
-freeswitch_install.sh		FreeSWITCH instalation with PostgreSQL-9.4-bdr
-fusionpbx_install.sh		FusionPBX installation with PostgreSQL-9.4-bdr, Nginx, PHP-7.2, Memcached, FreeSWITCH, Fail2ban
+freeswitch_install.sh
+	FreeSWITCH instalation with PostgreSQL-9.4-bdr
+
+fusionpbx_install.sh
+	FusionPBX installation with PostgreSQL-9.4-bdr, Nginx, PHP-7.2, Memcached, FreeSWITCH, Fail2ban
