@@ -1,0 +1,73 @@
+*** ldap.php	2020-12-11 03:50:52.000000000 -0300
+--- ldap.php.orig	2020-12-11 03:50:52.000000000 -0300
+***************
+*** 110,151 ****
+  						$array['users'][0]['username'] = strtolower($this->username);
+  						$array['users'][0]['password'] = md5($salt.$password);
+  						$array['users'][0]['salt'] = $salt;
+! 						//$array['users'][0]['add_date'] = now();
+! 						$array['users'][0]['add_date'] = date();
+  						$array['users'][0]['add_user'] = strtolower($this->username);
+  						$array['users'][0]['user_enabled'] = 'true';
+  
+  					//build user group insert array
+- 					// 
+- 					// "group_uuid": "0aa2be95-5d52-4bf7-8130-3dbd9794e132",
+- 					// "group_name": "superadmin",
+- 					// "group_description": "Super Administrator Group",
+- 					// 
+- 					// "group_uuid": "d917ba57-bfbe-4c65-94ee-e33a1703f8a7",
+- 					// "group_name": "admin",
+- 					// "group_description": "Administrator Group",
+- 					// 
+- 					// "group_uuid": "068a3e27-cbf3-4c50-aa14-58074c29c769",
+- 					// "group_name": "user",
+- 					// "group_description": "User Group",
+- 					// 
+- 					// "group_uuid": "efa850dd-818e-42f2-8bd3-cf750c2c3017",
+- 					// "group_name": "agent",
+- 					// "group_description": "Call Center Agent Group",
+- 					// 
+- 					// "group_uuid": "d01b00bf-20c3-4dc6-87fc-3d9331ec7af1",
+- 					// "group_name": "public",
+- 					// "group_description": "Public Group",
+- 					// 
+  						$array['user_groups'][0]['user_group_uuid'] = uuid();
+  						$array['user_groups'][0]['domain_uuid'] = $this->domain_uuid;
+! 						if (substr(strtolower($this->username),0,3) == "adm") {
+! 							$array['user_groups'][0]['group_name'] = 'admin';
+! 							$array['user_groups'][0]['group_uuid'] = 'd917ba57-bfbe-4c65-94ee-e33a1703f8a7';
+! 						} else {
+! 							$array['user_groups'][0]['group_name'] = 'user';
+! 							$array['user_groups'][0]['group_uuid'] = '068a3e27-cbf3-4c50-aa14-58074c29c769';
+! 						}
+  						$array['user_groups'][0]['user_uuid'] = $this->user_uuid;
+  
+  					//grant temporary permissions
+--- 110,123 ----
+  						$array['users'][0]['username'] = strtolower($this->username);
+  						$array['users'][0]['password'] = md5($salt.$password);
+  						$array['users'][0]['salt'] = $salt;
+! 						$array['users'][0]['add_date'] = now();
+  						$array['users'][0]['add_user'] = strtolower($this->username);
+  						$array['users'][0]['user_enabled'] = 'true';
+  
+  					//build user group insert array
+  						$array['user_groups'][0]['user_group_uuid'] = uuid();
+  						$array['user_groups'][0]['domain_uuid'] = $this->domain_uuid;
+! 						$array['user_groups'][0]['group_name'] = 'user';
+  						$array['user_groups'][0]['user_uuid'] = $this->user_uuid;
+  
+  					//grant temporary permissions
+***************
+*** 181,184 ****
+  	}
+  }
+  
+! ?>
+--- 153,156 ----
+  	}
+  }
+  
+! ?>
+\ No newline at end of file
