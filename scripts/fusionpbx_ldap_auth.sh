@@ -56,15 +56,15 @@ echo -e "DELETE FROM v_default_settings WHERE default_setting_category = 'ldap';
 # Create each subcategory
 echo "authentication|methods|array|database|000|true
 authentication|methods|array|ldap|000|true
-ldap|base_dn|text|cn=Users,dc=bndes,dc=net|000|true
+ldap|base_dn|text|cn=Users,dc=xyz,dc=com|000|true
 ldap|bind_password|text|senha#0|000|true
-ldap|bind_username|text|BNDES\\\\s-015-1|000|true
+ldap|bind_username|text|XYZ\\\\user|000|true
 ldap|enabled|boolean|true|000|true
 ldap|filter|text|(sAMAccountName=*)|000|true
-ldap|server_host|text|ldap.bndes.net|000|true
+ldap|server_host|text|ldap.xyz.com|000|true
 ldap|server_port|numeric|389|000|true
 ldap|user_attribute|text|cn|000|true
-ldap|user_dn|array|cn=Users,dc=bndes,dc=net|000|true" | \
+ldap|user_dn|array|cn=Users,dc=xyz,dc=com|000|true" | \
 while read line; do
         set xx `echo $line | tr '|' ' '`; shift
 

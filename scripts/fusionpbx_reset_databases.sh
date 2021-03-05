@@ -40,8 +40,8 @@ CREATE SCHEMA public;
 
 DROP ROLE fusionpbx;
 DROP ROLE freeswitch;
-CREATE ROLE fusionpbx WITH SUPERUSER LOGIN PASSWORD 'bndes@2020';
-CREATE ROLE freeswitch WITH SUPERUSER LOGIN PASSWORD 'bndes@2020';
+CREATE ROLE fusionpbx WITH SUPERUSER LOGIN PASSWORD 'Admin@2021';
+CREATE ROLE freeswitch WITH SUPERUSER LOGIN PASSWORD 'Admin@2021';
 
 GRANT ALL PRIVILEGES ON DATABASE fusionpbx to fusionpbx;
 GRANT ALL PRIVILEGES ON DATABASE freeswitch to fusionpbx;
@@ -54,13 +54,13 @@ EOF
 # Set fusionpbx auth
 #
 user_name='admin'
-user_password='bndes@2020'
+user_password='Admin@2021'
 
 #
 database_host=127.0.0.1
 database_port=5432
 database_username='fusionpbx'
-database_password='bndes@2020'
+database_password='Admin@2021'
 #
 PSQL="PGPASSWORD=$database_password $PSQL --host=$database_host --port=$database_port --username=$database_username"
 
